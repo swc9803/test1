@@ -2,7 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../pages/Home'
 import Test from '../pages/Test'
 import Test2 from '../pages/Test2'
-import Ttest from '../pages/Ttest'
+import Test3 from '../pages/Test3'
+import Test4 from '../pages/Test4'
+import Test5 from '../pages/Test5'
 
 const routes = [
   {
@@ -21,9 +23,19 @@ const routes = [
     component: Test2
   },
   {
-    path: '/ttest',
-    name: 'Ttest',
-    component: Ttest
+    path: '/test3',
+    name: 'Test3',
+    component: Test3
+  },
+  {
+    path: '/test4',
+    name: 'Test4',
+    component: Test4
+  },
+  {
+    path: '/test5',
+    name: 'Test5',
+    component: Test5
   }
 ]
 

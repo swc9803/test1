@@ -20,12 +20,13 @@ export default {
     const router = useRouter()
 
     onMounted(() => {
-      gsap.from('.boxx', {
+      gsap.to('.boxx', {
         scrollTrigger: {
           trigger: '.boxx',
+          start: 'center bottom',
           toggleActions: 'restart none reverse none'
         },
-        y: 400,
+        background: 'cyan',
         duration: 2
       })
     })
@@ -51,6 +52,6 @@ export default {
 .boxx {
   width: 300px;
   height: 300px;
-  background: rgb(224, 218, 218);
+  background: rgb(0, 0, 0);
 }
 </style>
