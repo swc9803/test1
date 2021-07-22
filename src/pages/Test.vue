@@ -33,7 +33,7 @@ export default {
 
     const go = () => {
       router.push({
-        name: 'Ttest'
+        name: 'Test3'
       })
     }
     return {
