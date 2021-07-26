@@ -1,12 +1,11 @@
 <template>
   <div>
     <button @mousedown="mousedown">button</button>
-    <div id="container"></div>
+    <div class="box"></div>
   </div>
 </template>
 
 <script>
-
 import anime from 'animejs/lib/anime.es.js'
 
 export default {
@@ -14,11 +13,11 @@ export default {
     function mousedown () {
       anime({
         /* anime 할 녀석 id 또는 클래스명 */
-        targets: '#container',
+        targets: '.box',
         /* anime 할 CSS 속성들 */
-        scale: 0.5,
+        scale: 1,
         rotate: '1turn',
-        backgroundColor: 'rgb(255, 100, 0)',
+        backgroundColor: 'rgb(200, 100, 0)',
         delay: 100,
         duration: 1000,
         // https://animejs.com/documentation/#linearEasing
@@ -36,13 +35,12 @@ export default {
       mousedown
     }
   }
-
 }
 
 </script>
 
 <style scoped>
-#container {
+.box {
   width: 200px;
   height: 200px;
   background-color: rgb(0, 100, 200);
