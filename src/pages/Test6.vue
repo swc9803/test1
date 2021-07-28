@@ -3,7 +3,8 @@
   <div class="b box"/>
   <p class="remove">Now, I'm appearing</p>
   <div class="void"/>
-  <!-- <div class="c box"/> -->
+  <p class="remove2">Now, I'm appearing</p>
+  <div class="void"/>
 </template>
 
 <script>
@@ -15,32 +16,31 @@ gsap.registerPlugin(ScrollTrigger)
 export default {
   setup () {
     onMounted(() => {
-      // gsap.to('.c', {
-      //   scrollTrigger: {
-      //     trigger: '.c',
-      //     // pin: true,
-      //     start: 'top 50%',
-      //     end: 'bottom 30%',
-      //     scrub: 1,
-      //     markers: true
-      //   },
-      //   x: 400,
-      //   rotation: 360,
-      //   ease: 'none',
-      //   duration: 3
-      // })
       gsap.from('.remove', {
         scrollTrigger: {
           trigger: '.remove',
-          pin: true,
-          start: 'center center',
-          end: 'bottom top',
+          // pin: true,
+          start: 'top 90%',
+          end: 'bottom center',
           scrub: 2,
           markers: true
         },
         opacity: 0,
         ease: 'none',
         duration: 10
+      })
+      gsap.from('.remove2', {
+        scrollTrigger: {
+          trigger: '.remove2',
+          pin: true,
+          start: 'top center',
+          end: 'top top',
+          scrub: 2,
+          markers: true
+        },
+        opacity: 0,
+        ease: 'none',
+        duration: 1
       })
     })
   }
@@ -50,6 +50,7 @@ export default {
 <style scoped>
 .remove {
   text-align: center;
+  font-size: 20px;
 }
 .void {
   margin-bottom: 1000px;
@@ -64,9 +65,5 @@ export default {
 }
 .b {
   background: orange;
-}
-.c {
-  background: yellow;
-  margin-bottom: 900px;
 }
 </style>

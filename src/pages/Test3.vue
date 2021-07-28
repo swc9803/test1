@@ -42,7 +42,19 @@ export default {
     })
 
     onMounted(() => {
-
+      gsap.from('.fixed', {
+        scrollTrigger: {
+          trigger: '.fixed',
+          // pin: true,
+          start: 'top center',
+          end: 'top top',
+          scrub: 2,
+          markers: true
+        },
+        opacity: 0,
+        ease: 'none',
+        duration: 10
+      })
     })
   }
 }
@@ -58,7 +70,6 @@ export default {
   /* background-size: 100%; */
   background-attachment: fixed;
   position: absolute;
-  opacity: 0.6;
 }
 .section {
   width: 100%;
