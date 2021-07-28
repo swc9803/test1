@@ -4,7 +4,6 @@
     <div class="screen"></div>
     <p class="remove">Now, I'm disappearing</p>
     <div class="screen"></div>
-    <!-- <div class="scrollElement" /> -->
   </div>
 </template>
 
@@ -48,13 +47,6 @@ export default {
 .screen {
   width: 100%;
   height: 100vh;
-}
-.scrollElement {
-  position: absolute;
-  height: 2000px;
-  width: 100px;
-  top: 0;
-  z-index: -1;
 }
 .remove {
   text-align: center;
