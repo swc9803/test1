@@ -21,7 +21,7 @@ export default {
           trigger: '.remove',
           // pin: true,
           start: 'top 90%',
-          end: 'bottom center',
+          end: 'top center',
           scrub: 2,
           markers: true
         },
@@ -49,7 +49,9 @@ export default {
 
 <style scoped>
 .remove {
-  text-align: center;
+  font-size: 20px;
+}
+.remove2 {
   font-size: 20px;
 }
 .void {

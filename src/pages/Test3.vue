@@ -4,7 +4,9 @@
       section1
     </section>
     <section class="section2">
-      <div class="fixed" />
+      <div class="fixed">
+        <p class="dd">City</p>
+      </div>
     </section>
     <section class="section3">
       section3
@@ -37,30 +39,52 @@ export default {
         pinSpacing: false
       })
     })
-    ScrollTrigger.create({
-      snap: 1 / 5
-    })
+    // ScrollTrigger.create({
+    //   snap: 1 / 5
+    // })
 
     onMounted(() => {
-      gsap.from('.fixed', {
+      gsap.to('.fixed', {
         scrollTrigger: {
           trigger: '.fixed',
           // pin: true,
-          start: 'top center',
-          end: 'top top',
+          start: 'center 90%',
+          end: 'top center',
           scrub: 2,
           markers: true
         },
-        opacity: 0,
-        ease: 'none',
-        duration: 10
+        filter: 'grayscale(0) blur(0px)',
+        // progress
+        ease: 'none'
       })
+      // gsap.from('.dd', {
+      //   scrollTrigger: {
+      //     trigger: '.dd',
+      //     // pin: true,
+      //     start: 'center bottom',
+      //     end: 'top top',
+      //     scrub: 2,
+      //     markers: true
+      //   },
+      //   y: 100,
+      //   opacity: 0,
+      //   ease: 'none',
+      //   duration: 10
+      // })
     })
   }
 }
 </script>
 
 <style scoped>
+.dd {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 30px
+}
 .fixed {
   width: 100%;
   height: 100%;
@@ -70,6 +94,7 @@ export default {
   /* background-size: 100%; */
   background-attachment: fixed;
   position: absolute;
+  filter: grayscale(10) blur(3px);
 }
 .section {
   width: 100%;
@@ -77,33 +102,27 @@ export default {
   position: absolute;
 }
 .section1 {
-  /* background: orange; */
   width: 100%;
   height: 100%;
 }
 .section2 {
-  /* background: yellowgreen; */
   position: relative;
   width: 100%;
   height: 100%;
 }
 .section3 {
-  /* background: firebrick; */
   width: 100%;
   height: 100%;
 }
 .section4 {
-  /* background: cornflowerblue; */
   width: 100%;
   height: 100%;
 }
 .section5 {
-  /* background: seagreen; */
   width: 100%;
   height: 100%;
 }
 .section6 {
-  /* background: cyan; */
   width: 100%;
   height: 100%;
 }
