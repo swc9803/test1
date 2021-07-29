@@ -1,19 +1,24 @@
 <template>
-  <div class="a box"/>
-  <div class="b box"/>
+  <div class="void"/>
   <p class="remove">Now, I'm appearing</p>
   <div class="void"/>
   <p class="remove2">Now, I'm appearing</p>
   <div class="void"/>
+  <Test7 class="dd" />
+  <div class="void"/>
 </template>
 
 <script>
+import Test7 from '@/pages/Test7'
 import { onMounted } from 'vue'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 export default {
+  components: {
+    Test7
+  },
   setup () {
     onMounted(() => {
       gsap.from('.remove', {
@@ -43,11 +48,28 @@ export default {
         duration: 1
       })
     })
+    gsap.to('.dd', {
+      scrollTrigger: {
+        trigger: '.dd',
+        pin: true,
+        start: 'top 90%',
+        end: 'top top',
+        scrub: 2,
+        markers: true
+      },
+      ease: 'none'
+    })
+    gsap.to('.rotate3', {
+      duration: 20, rotate: 360, ease: 'none', x: -6000, y: 1000
+    })
   }
 }
 </script>
 
 <style scoped>
+.dd {
+  top: 500%
+}
 .remove {
   font-size: 20px;
 }
@@ -55,17 +77,6 @@ export default {
   font-size: 20px;
 }
 .void {
-  margin-bottom: 1000px;
-}
-.box {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 300px;
-}
-.a {
-  background: red;
-}
-.b {
-  background: orange;
+  margin-bottom: 100%;
 }
 </style>
