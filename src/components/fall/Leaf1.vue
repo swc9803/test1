@@ -26,7 +26,7 @@ gsap.registerPlugin(ScrollTrigger)
 export default {
   setup () {
     onMounted(() => {
-      gsap.to('.rotate1', {
+      gsap.from('.rotate1', {
         // duration: 40, rotate: 200, ease: 'none', x: -2000, y: 400
       })
     })

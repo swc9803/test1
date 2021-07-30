@@ -1,18 +1,20 @@
 <template>
-  <div class="scrollElement" />
-  <Scroll />
-  <Fall class="line" />
-  <Leaf1 class="Leaf1 Leaf" />
-  <Leaf2 class="Leaf2 Leaf" />
-  <Leaf3 class="Leaf3 Leaf" />
+  <div class="wrapper">
+    <div class="scrollElement" />
+    <Scroll class="Scroll svg" />
+    <Fall class="svg" />
+    <!-- <Leaf1 class="Leaf1 Leaf svg" />
+    <Leaf2 class="Leaf2 Leaf svg" />
+    <Leaf3 class="Leaf3 Leaf svg" /> -->
+  </div>
 </template>
 
 <script>
-import Fall from '@/components/Fall'
-import Leaf1 from '@/components/Leaf1'
-import Leaf2 from '@/components/Leaf2'
-import Leaf3 from '@/components/Leaf3'
-import Scroll from '@/components/Scroll'
+import Fall from '@/components/fall/Fall'
+// import Leaf1 from '@/components/fall/Leaf1'
+// import Leaf2 from '@/components/fall/Leaf2'
+// import Leaf3 from '@/components/fall/Leaf3'
+import Scroll from '@/components/fall/Scroll'
 
 import { onMounted } from 'vue'
 import { gsap } from 'gsap'
@@ -21,43 +23,44 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 export default {
   components: {
-    Fall, Leaf1, Leaf2, Leaf3, Scroll
+    Scroll,
+    Fall
+    // Leaf1, Leaf2, Leaf3,
   },
   setup () {
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0)
+    }
     onMounted(() => {
-      const Fall = gsap.timeline()
+      const Scroll = gsap.timeline()
       ScrollTrigger.create({
-        animation: Fall,
+        animation: Scroll,
         trigger: '.scrollElement',
-        start: '10% 10%',
-        end: '20% 40%',
+        start: 'top top',
+        end: '4% top',
         scrub: 2,
         markers: true
       })
-      Fall.to('.line', { y: '-300%' }, 0)
-      Fall.to('.line', { opacity: 1 }, 0)
-
-      const Leaf1 = gsap.timeline()
-      ScrollTrigger.create({
-        animation: Leaf1,
-        trigger: '.scrollElement',
-        start: '17% 10%',
-        end: '20% 40%',
-        scrub: 2,
-        markers: true
-      })
-      Leaf1.to('.Leaf1', { x: -2000, y: 400 }, 0)
+      Scroll.to('.Scroll', { opacity: 0 }, 0)
+      Scroll.to('.Scroll', { y: 100 }, 0)
     })
   }
 }
 </script>
 
 <style scoped>
-.line {
-  top: 100%;
-  position: fixed;
+.wrapper {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.svg {
   display: block;
-  opacity: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 .scrollElement {
   position: absolute;
@@ -66,10 +69,8 @@ export default {
   top: 0;
   opacity: 0;
 }
-.Leaf {
-  top: 100%;
+.rotate1{
   position: fixed;
   display: block;
-  z-index: 1;
 }
 </style>
