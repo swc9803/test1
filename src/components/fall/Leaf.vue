@@ -59,8 +59,8 @@ export default {
       ScrollTrigger.create({
         animation: Leaf1,
         trigger: '.scrollElement',
-        start: '5% top',
-        end: '130% 100%',
+        start: '4.5% top',
+        end: '40% 100%',
         scrub: 3
       })
       Leaf1.fromTo('.rotate1', { visibility: 'hidden', x: 2000, rotate: 250 }, { visibility: 'visible', x: -4000, rotate: 0 }, 0)
@@ -70,8 +70,8 @@ export default {
       ScrollTrigger.create({
         animation: Leaf2,
         trigger: '.scrollElement',
-        start: '11% top',
-        end: '80% 100%',
+        start: '4.5% top',
+        end: '30% 100%',
         scrub: 3
       })
       Leaf2.fromTo('.rotate2', { visibility: 'hidden', x: 2000, rotate: 250, ease: 'none' }, { visibility: 'visible', x: -4000, rotate: 0, ease: 'none' }, 0)
@@ -81,22 +81,22 @@ export default {
       ScrollTrigger.create({
         animation: Leaf3,
         trigger: '.scrollElement',
-        start: '11% top',
-        end: '60% 100%',
+        start: '4.5% top',
+        end: '30% 100%',
         scrub: 3
       })
-      Leaf3.fromTo('.rotate3', { visibility: 'hidden', x: 2000, rotate: 250, ease: 'none' }, { visibility: 'visible', x: -5000, rotate: 0, ease: 'none' }, 0)
+      Leaf3.fromTo('.rotate3', { visibility: 'hidden', x: 2000, rotate: 250, ease: 'none' }, { visibility: 'visible', x: -8000, rotate: 0, ease: 'none' }, 0)
       Leaf3.fromTo('.leaf3', { y: -170 }, { y: 100 }, 0)
 
       const Leaf4 = gsap.timeline()
       ScrollTrigger.create({
         animation: Leaf4,
         trigger: '.scrollElement',
-        start: '80% top',
-        end: '100% 100%',
+        start: '20% top',
+        end: '30% 100%',
         scrub: 2
       })
-      Leaf4.fromTo('.leaf4', { visibility: 'hidden', x: 2000, ease: 'none' }, { visibility: 'visible', x: -5000, rotate: 0, ease: 'none' }, 0)
+      Leaf4.fromTo('.leaf4', { visibility: 'hidden', x: 2000, ease: 'none' }, { visibility: 'visible', x: -800, rotate: 0, ease: 'none' }, 0)
     })
   }
 }
