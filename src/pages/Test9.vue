@@ -6,6 +6,7 @@
     <Leaf />
     <Winter class="svg" />
     <Snow />
+    <Snowman class=""/>
   </div>
 </template>
 
@@ -15,6 +16,7 @@ import Fall from '@/components/fall/Fall'
 import Leaf from '@/components/fall/Leaf'
 import Winter from '@/components/winter/Winter'
 import Snow from '@/components/winter/Snow'
+import Snowman from '@/components/winter/Snowman'
 
 import { onMounted } from 'vue'
 import { gsap } from 'gsap'
@@ -27,7 +29,8 @@ export default {
     Fall,
     Leaf,
     Winter,
-    Snow
+    Snow,
+    Snowman
   },
   setup () {
     window.onbeforeunload = function () {
