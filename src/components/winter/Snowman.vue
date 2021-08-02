@@ -1,7 +1,10 @@
 <template>
   <svg class="snowman" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect id="groundsnow" x="-337" y="887" width="2600" height="550" fill="white"/>
     <g id="snowman">
+      <g id="head" filter="url(#filter1_d)">
+        <circle cx="1459" cy="678" r="72" fill="white"/>
+      </g>
+      <rect id="groundsnow" x="-337" y="887" width="2600" height="550" fill="white"/>
       <g id="body" filter="url(#filter0_d)">
         <circle cx="1458.5" cy="832.5" r="110.5" fill="white"/>
       </g>
@@ -12,9 +15,6 @@
       </g>
       <path id="lefthand" d="M1388.38 826.696C1390.29 827.816 1392.74 827.181 1393.86 825.277C1394.98 823.373 1394.34 820.921 1392.44 819.801L1388.38 826.696ZM1285.97 766.448L1388.38 826.696L1392.44 819.801L1290.03 759.552L1285.97 766.448Z" fill="url(#paint0_linear)"/>
       <path id="righthand" d="M1520.62 819.509C1518.84 820.824 1518.47 823.329 1519.79 825.104C1521.1 826.879 1523.61 827.252 1525.38 825.937L1520.62 819.509ZM1616.1 748.786L1520.62 819.509L1525.38 825.937L1620.86 755.214L1616.1 748.786Z" fill="url(#paint1_linear)"/>
-      <g id="head" filter="url(#filter1_d)">
-        <circle cx="1459" cy="678" r="72" fill="white"/>
-      </g>
       <g id="face">
         <g id="eyes">
           <circle id="lefteye" cx="1432" cy="658" r="8" fill="#3E3E3E"/>
@@ -161,43 +161,71 @@ export default {
       ScrollTrigger.create({
         animation: Ground,
         trigger: '.scrollElement',
-        start: '23% top',
-        end: '32% 100%',
+        start: '25% top',
+        end: '25% 100%',
         scrub: 3
       })
-      Ground.from('#groundsnow', { y: 1000, ease: 'none' }, 0)
+      Ground.from('#groundsnow', { opacity: 0, y: 300, ease: 'none' }, 0)
 
       const Body = gsap.timeline()
       ScrollTrigger.create({
         animation: Body,
         trigger: '.scrollElement',
-        start: '30% top',
-        end: '45% 100%',
-        scrub: 5
+        start: '29% top',
+        end: '48% 100%',
+        scrub: 3
       })
-      Body.from('#body', { x: -2000, delay: 3.5, duration: 5000, ease: Power4.easeOut }, 0)
+      Body.from('#body', { x: -2000, duration: 5000, ease: Power4 }, 0)
 
       const Head = gsap.timeline()
       ScrollTrigger.create({
         animation: Head,
         trigger: '.scrollElement',
-        start: '30% top',
-        end: '45% 100%',
-        scrub: 5,
-        markers: true
+        start: '42% top',
+        end: '47% 100%',
+        scrub: 2
       })
-      Head.from('#head', { x: -2000, delay: 3.5, duration: 5000, ease: Power4.easeOut }, 0)
+      Head.from('#head', { opacity: 0, y: 200, duration: 5000, ease: Power4 }, 0)
+
+      const Handbutton = gsap.timeline()
+      ScrollTrigger.create({
+        animation: Handbutton,
+        trigger: '.scrollElement',
+        start: '45% top',
+        end: '47% 100%',
+        scrub: 3
+      })
+      Handbutton.from('#lefthand, #righthand, #buttons', { opacity: 0, duration: 3 }, 0)
 
       const Face = gsap.timeline()
       ScrollTrigger.create({
         animation: Face,
         trigger: '.scrollElement',
-        start: '31% top',
-        end: '45% 100%',
-        scrub: 2,
-        markers: true
+        start: '48% top',
+        end: '57% 100%',
+        scrub: 3
       })
       Face.from('#face', { opacity: 0, duration: 3, delay: 5 }, 0)
+
+      const Scarf = gsap.timeline()
+      ScrollTrigger.create({
+        animation: Scarf,
+        trigger: '.scrollElement',
+        start: '51% top',
+        end: '57% 100%',
+        scrub: 3
+      })
+      Scarf.from('#scarf', { opacity: 0, y: -100, duration: 3, delay: 5 }, 0)
+
+      const Hat = gsap.timeline()
+      ScrollTrigger.create({
+        animation: Hat,
+        trigger: '.scrollElement',
+        start: '54% top',
+        end: '57% 100%',
+        scrub: 3
+      })
+      Hat.from('#hat', { opacity: 0, y: -100, duration: 3, delay: 5 }, 0)
     })
   }
 }

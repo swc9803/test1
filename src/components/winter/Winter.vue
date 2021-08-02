@@ -36,16 +36,6 @@ export default {
         scrub: 2
       })
       Winter.fromTo('.winter', { opacity: 0, duration: 10 }, { opacity: 1, duration: 10 }, 0)
-
-      const Vibration = gsap.timeline()
-      ScrollTrigger.create({
-        animation: Vibration,
-        trigger: '.scrollElement',
-        start: '22% top',
-        end: '22% 100%',
-        markers: true,
-        scrub: 2
-      })
       gsap.to('.winter', { x: 20, ease: 'none', delay: 5.8, duration: 0.1, repeat: -1, repeatDelay: 7.9 })
       gsap.to('.winter', { x: -20, ease: 'none', delay: 5.9, duration: 0.1, repeat: -1, repeatDelay: 7.9 })
       gsap.from('#white', { opacity: 0, ease: Power2, delay: 2.7, duration: 4, repeat: -1, repeatDelay: 4 })
