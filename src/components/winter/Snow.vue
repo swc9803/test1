@@ -231,7 +231,7 @@ export default {
         animation: Snow,
         trigger: '.scrollElement',
         start: '20.3% top',
-        end: '50% 100%',
+        end: '120% 100%',
         scrub: 2,
         onEnter: () => {
           gsap.to('.snow', { visibility: 'visible' })

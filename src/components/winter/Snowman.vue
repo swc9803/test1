@@ -211,7 +211,7 @@ export default {
       ScrollTrigger.create({
         animation: Scarf,
         trigger: '.scrollElement',
-        start: '51% top',
+        start: '50% top',
         end: '57% 100%',
         scrub: 3
       })
