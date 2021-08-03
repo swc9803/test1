@@ -41,7 +41,12 @@
     <path class="rotate3" d="M3458.66 97.1755C3540.27 118.725 3590.06 161.164 3594.54 207.163C3594.6 207.811 3594.45 208.456 3594.09 209.002C3568.47 248.392 3498.54 272.058 3416.91 250.505C3335.86 229.104 3270.33 136.972 3269.05 122.749C3269.01 122.341 3269.09 122.032 3269.37 121.734C3276.61 114.035 3378.19 75.9288 3458.66 97.1755Z" fill="black"/>
   </svg>
 
-  <svg class="leaf4" width="9451" height="2535" viewBox="0 0 9451 2535" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg class="leaf4 leaf" width="9178" height="1024" viewBox="0 0 4534 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path class="rotate4" d="M576.511 775.436C270.375 693.407 84.6391 532.973 70.2554 360.067C70.2014 359.418 70.3591 358.776 70.7107 358.227C165.707 210.084 428.359 121.309 734.507 203.341C1040.08 285.218 1285.51 636.597 1285.08 684.07C1285.07 684.48 1285.04 684.671 1284.82 685.017C1268.7 710.429 881.499 857.158 576.511 775.436Z" fill="black"/>
+    <path class="rotate4" d="M3842.58 375.529C3961.76 126.272 4128.89 -7.31711 4279.37 7.8787C4280.02 7.94414 4280.63 8.21683 4281.1 8.66314C4392.85 113.801 4426.95 353.068 4307.77 602.336C4188.84 851.065 3848.75 1005.3 3807.81 997.534C3807.41 997.458 3807.22 997.389 3806.92 997.106C3787.65 978.682 3723.92 623.714 3842.58 375.529Z" fill="black"/>
+  </svg>
+
+  <svg class="leaf5" width="9451" height="2535" viewBox="0 0 9451 2535" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M307.738 -1H9451V2624.53C9451 2624.53 3794.13 2963.36 1450.36 2299.56C-893.409 1635.76 307.738 -1 307.738 -1Z" fill="black"/>
   </svg>
 </template>
@@ -92,11 +97,22 @@ export default {
       ScrollTrigger.create({
         animation: Leaf4,
         trigger: '.scrollElement',
+        start: '4.5% top',
+        end: '30% 100%',
+        scrub: 2
+      })
+      Leaf4.fromTo('.rotate4', { visibility: 'hidden', x: 2000, rotate: 250, ease: 'none' }, { visibility: 'visible', x: -8000, rotate: 0, ease: 'none' }, 0)
+      Leaf3.fromTo('.leaf4', { y: -170 }, { y: 100 }, 0)
+
+      const Leaf5 = gsap.timeline()
+      ScrollTrigger.create({
+        animation: Leaf5,
+        trigger: '.scrollElement',
         start: '20% top',
         end: '30% 100%',
         scrub: 2
       })
-      Leaf4.fromTo('.leaf4', { visibility: 'hidden', x: 2000, ease: 'none' }, { visibility: 'visible', x: -800, rotate: 0, ease: 'none' }, 0)
+      Leaf5.fromTo('.leaf5', { visibility: 'hidden', x: 2000, ease: 'none' }, { visibility: 'visible', x: -800, rotate: 0, ease: 'none' }, 0)
     })
   }
 }
@@ -110,7 +126,7 @@ export default {
   left: 0;
   height: 100%;
 }
-.leaf4 {
+.leaf5 {
   position: fixed;
   display: block;
   top: 0;
