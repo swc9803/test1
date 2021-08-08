@@ -31,24 +31,24 @@ export default {
       ScrollTrigger.create({
         animation: Winter,
         trigger: '.scrollElement',
-        start: '22% top',
-        end: '33% 100%',
+        start: '30% top',
+        end: '42% 100%',
         scrub: 2
       })
-      Winter.fromTo('.winter', { opacity: 0, duration: 10 }, { opacity: 1, duration: 10 }, 0)
-      gsap.to('.winter', { x: 20, ease: 'none', delay: 5.8, duration: 0.1, repeat: -1, repeatDelay: 7.9 })
-      gsap.to('.winter', { x: -20, ease: 'none', delay: 5.9, duration: 0.1, repeat: -1, repeatDelay: 7.9 })
+      Winter.fromTo('.winter', { opacity: 0, duration: 10, delay: 2 }, { opacity: 1, duration: 10, delay: 2 }, 0)
+      gsap.to('.winter', { x: 10, ease: 'none', delay: 5.8, duration: 0.03, repeat: -1, repeatDelay: 7.97 })
+      gsap.to('.winter', { x: -10, ease: 'none', delay: 5.9, duration: 0.03, repeat: -1, repeatDelay: 7.97 })
       gsap.from('#white', { opacity: 0, ease: Power2, delay: 2.7, duration: 4, repeat: -1, repeatDelay: 4 })
       gsap.to('#white', { opacity: 0, ease: Power2, delay: 5.9, duration: 1, repeat: -1, repeatDelay: 7 })
-      gsap.to('.winter', { x: 20, ease: 'none', delay: 6, duration: 0.1, repeat: -1, repeatDelay: 7.9 })
-      gsap.to('.winter', { x: -20, ease: 'none', delay: 6.1, duration: 0.1, repeat: -1, repeatDelay: 7.9 })
-      gsap.to('.winter', { x: 20, ease: 'none', delay: 6.2, duration: 0.1, repeat: -1, repeatDelay: 7.9 })
-      gsap.to('.winter', { x: -20, ease: 'none', delay: 6.3, duration: 0.1, repeat: -1, repeatDelay: 7.9 })
-      gsap.to('.winter', { x: 20, ease: 'none', delay: 6.4, duration: 0.1, repeat: -1, repeatDelay: 7.9 })
-      gsap.to('.winter', { x: -20, ease: 'none', delay: 6.5, duration: 0.1, repeat: -1, repeatDelay: 7.9 })
-      gsap.to('.winter', { x: 20, ease: 'none', delay: 6.6, duration: 0.1, repeat: -1, repeatDelay: 7.9 })
-      gsap.to('.winter', { x: -20, ease: 'none', delay: 6.7, duration: 0.1, repeat: -1, repeatDelay: 7.9 })
-      gsap.to('.winter', { x: 0, ease: Power4, delay: 6.8, duration: 0.1, repeat: -1, repeatDelay: 7.9 })
+      gsap.to('.winter', { x: 10, ease: 'none', delay: 6, duration: 0.03, repeat: -1, repeatDelay: 7.97 })
+      gsap.to('.winter', { x: -10, ease: 'none', delay: 6.1, duration: 0.03, repeat: -1, repeatDelay: 7.97 })
+      gsap.to('.winter', { x: 10, ease: 'none', delay: 6.2, duration: 0.03, repeat: -1, repeatDelay: 7.97 })
+      gsap.to('.winter', { x: -10, ease: 'none', delay: 6.3, duration: 0.03, repeat: -1, repeatDelay: 7.97 })
+      gsap.to('.winter', { x: 10, ease: 'none', delay: 6.4, duration: 0.03, repeat: -1, repeatDelay: 7.97 })
+      gsap.to('.winter', { x: -10, ease: 'none', delay: 6.5, duration: 0.03, repeat: -1, repeatDelay: 7.97 })
+      gsap.to('.winter', { x: 10, ease: 'none', delay: 6.6, duration: 0.03, repeat: -1, repeatDelay: 7.97 })
+      gsap.to('.winter', { x: -10, ease: 'none', delay: 6.7, duration: 0.03, repeat: -1, repeatDelay: 7.97 })
+      gsap.to('.winter', { x: 0, ease: Power4, delay: 6.8, duration: 0.03, repeat: -1, repeatDelay: 7.97 })
     })
   }
 }

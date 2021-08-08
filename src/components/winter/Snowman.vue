@@ -161,8 +161,8 @@ export default {
       ScrollTrigger.create({
         animation: Ground,
         trigger: '.scrollElement',
-        start: '25% top',
-        end: '25% 100%',
+        start: '33% top',
+        end: '33% 100%',
         scrub: 3
       })
       Ground.from('#groundsnow', { opacity: 0, y: 300, ease: 'none' }, 0)
@@ -171,8 +171,8 @@ export default {
       ScrollTrigger.create({
         animation: Body,
         trigger: '.scrollElement',
-        start: '29% top',
-        end: '48% 100%',
+        start: '50% top',
+        end: '65% 100%',
         scrub: 3
       })
       Body.from('#body', { x: -2000, duration: 5000, ease: Power4 }, 0)
@@ -181,8 +181,8 @@ export default {
       ScrollTrigger.create({
         animation: Head,
         trigger: '.scrollElement',
-        start: '42% top',
-        end: '47% 100%',
+        start: '67% top',
+        end: '72% 100%',
         scrub: 2
       })
       Head.from('#head', { opacity: 0, y: 200, duration: 5000, ease: Power4 }, 0)
@@ -191,8 +191,8 @@ export default {
       ScrollTrigger.create({
         animation: Handbutton,
         trigger: '.scrollElement',
-        start: '45% top',
-        end: '47% 100%',
+        start: '74% top',
+        end: '76% 100%',
         scrub: 3
       })
       Handbutton.from('#lefthand, #righthand, #buttons', { opacity: 0, duration: 3 }, 0)
@@ -201,8 +201,8 @@ export default {
       ScrollTrigger.create({
         animation: Face,
         trigger: '.scrollElement',
-        start: '48% top',
-        end: '57% 100%',
+        start: '70% top',
+        end: '78% 100%',
         scrub: 3
       })
       Face.from('#face', { opacity: 0, duration: 3, delay: 5 }, 0)
@@ -211,8 +211,8 @@ export default {
       ScrollTrigger.create({
         animation: Scarf,
         trigger: '.scrollElement',
-        start: '50% top',
-        end: '57% 100%',
+        start: '75% top',
+        end: '80% 100%',
         scrub: 3
       })
       Scarf.from('#scarf', { opacity: 0, y: -100, duration: 3, delay: 5 }, 0)
@@ -221,8 +221,8 @@ export default {
       ScrollTrigger.create({
         animation: Hat,
         trigger: '.scrollElement',
-        start: '54% top',
-        end: '57% 100%',
+        start: '80% top',
+        end: '82% 100%',
         scrub: 3
       })
       Hat.from('#hat', { opacity: 0, y: -100, duration: 3, delay: 5 }, 0)

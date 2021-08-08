@@ -6,7 +6,7 @@
     <Leaf />
     <Winter class="svg" />
     <Snow />
-    <Snowman class=""/>
+    <Snowman class="svg"/>
   </div>
 </template>
 

@@ -17,8 +17,8 @@ export default {
       ScrollTrigger.create({
         animation: Fall,
         trigger: '.scrollElement',
-        start: '4% top',
-        end: '4% 100%',
+        start: '6% top',
+        end: '6% 100%',
         scrub: 2
       })
       Fall.from('.fall', { opacity: 0, y: 500 }, 0)

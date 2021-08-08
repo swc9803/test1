@@ -64,8 +64,8 @@ export default {
       ScrollTrigger.create({
         animation: Leaf1,
         trigger: '.scrollElement',
-        start: '4.5% top',
-        end: '40% 100%',
+        start: '8% top',
+        end: '45% 100%',
         scrub: 3
       })
       Leaf1.fromTo('.rotate1', { visibility: 'hidden', x: 2000, rotate: 250 }, { visibility: 'visible', x: -4000, rotate: 0 }, 0)
@@ -75,8 +75,8 @@ export default {
       ScrollTrigger.create({
         animation: Leaf2,
         trigger: '.scrollElement',
-        start: '4.5% top',
-        end: '30% 100%',
+        start: '8% top',
+        end: '35% 100%',
         scrub: 3
       })
       Leaf2.fromTo('.rotate2', { visibility: 'hidden', x: 2000, rotate: 250, ease: 'none' }, { visibility: 'visible', x: -4000, rotate: 0, ease: 'none' }, 0)
@@ -86,8 +86,8 @@ export default {
       ScrollTrigger.create({
         animation: Leaf3,
         trigger: '.scrollElement',
-        start: '4.5% top',
-        end: '30% 100%',
+        start: '8% top',
+        end: '35% 100%',
         scrub: 3
       })
       Leaf3.fromTo('.rotate3', { visibility: 'hidden', x: 2000, rotate: 250, ease: 'none' }, { visibility: 'visible', x: -8000, rotate: 0, ease: 'none' }, 0)
@@ -97,8 +97,8 @@ export default {
       ScrollTrigger.create({
         animation: Leaf4,
         trigger: '.scrollElement',
-        start: '4.5% top',
-        end: '30% 100%',
+        start: '8% top',
+        end: '35% 100%',
         scrub: 2
       })
       Leaf4.fromTo('.rotate4', { visibility: 'hidden', x: 2000, rotate: 250, ease: 'none' }, { visibility: 'visible', x: -8000, rotate: 0, ease: 'none' }, 0)
@@ -108,8 +108,8 @@ export default {
       ScrollTrigger.create({
         animation: Leaf5,
         trigger: '.scrollElement',
-        start: '20% top',
-        end: '30% 100%',
+        start: '24% top',
+        end: '34% 100%',
         scrub: 2
       })
       Leaf5.fromTo('.leaf5', { visibility: 'hidden', x: 2000, ease: 'none' }, { visibility: 'visible', x: -800, rotate: 0, ease: 'none' }, 0)
