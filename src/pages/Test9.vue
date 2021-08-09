@@ -3,6 +3,7 @@
     <div class="scrollElement" />
     <Scroll class="svg" />
     <Fall class="svg" />
+    <Reed />
     <Leaf />
     <Winter class="svg" />
     <Snow />
@@ -13,6 +14,7 @@
 <script>
 import Scroll from '@/components/fall/Scroll'
 import Fall from '@/components/fall/Fall'
+import Reed from '@/components/fall/Reed'
 import Leaf from '@/components/fall/Leaf'
 import Winter from '@/components/winter/Winter'
 import Snow from '@/components/winter/Snow'
@@ -27,6 +29,7 @@ export default {
   components: {
     Scroll,
     Fall,
+    Reed,
     Leaf,
     Winter,
     Snow,
