@@ -100,10 +100,6 @@
           <circle id="Ellipse 10_2" cx="733.5" cy="241.5" r="1.5" fill="#000"/>
         </g>
       </g>
-      <g id="dash" fill="#9CCBE7">
-        <path id="dash_2" d="M296.39 192.85c8.19-8.76 14.68-9.85 23.48-13.51l1.5.3s-8.81 3.48-13.34 5.47c-4.53 2-10.68 7.94-10.68 7.94l-.96-.2z"/>
-        <path id="dash_3" d="M293.23 192.58c-8.37-8.96-14.88-9.96-23.73-13.6l-1.49.36s8.87 3.43 13.43 5.42c4.56 1.99 10.82 8.05 10.82 8.05l.97-.23z"/>
-      </g>
       <g id="rain2" fill-opacity=".75">
         <rect id="Rectangle 35" x="747.48" y="313.17" width="3.67" height="28.16" rx="1.83" transform="rotate(2 747.48 313.17)" fill="url(#paint1_linear)"/>
         <rect id="Rectangle 35_2" x="179.38" y="242.79" width="3.67" height="19.81" rx="1.83" transform="rotate(2 179.38 242.8)" fill="url(#paint2_linear)"/>
@@ -535,10 +531,10 @@
         <stop stop-color="#2D9BDA"/>
         <stop offset="1" stop-color="#9CCBE7"/>
       </linearGradient>
-      <filter id="filter0_f" x="250" y="300.37" width="530.5" height="60.55" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <filter id="filter0_f" x="252" y="302.37" width="526.5" height="56.55" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
         <feFlood flood-opacity="0" result="BackgroundImageFix"/>
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-        <feGaussianBlur stdDeviation="3" result="effect1_foregroundBlur"/>
+        <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur"/>
       </filter>
       <filter id="filter1_d" x="681" y="184" width="53" height="34" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
         <feFlood flood-opacity="0" result="BackgroundImageFix"/>
@@ -631,7 +627,7 @@ export default {
   top: 0;
   left: 0;
 }
-#splash1, #splash2, #splash3, #splash4, #splash5, #dash {
+#splash1, #splash2, #splash3, #splash4, #splash5 {
   opacity: 0;
 }
 </style>
