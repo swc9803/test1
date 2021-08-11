@@ -19,9 +19,32 @@ export default {
         trigger: '.scrollElement',
         start: '6% top',
         end: '6% 100%',
-        scrub: 2
+        scrub: 2,
+        onEnter: () => {
+          // const url = '#fall'
+          // history.pushState('', '', url)
+        },
+        onLeave: () => {
+          // const url = '#fall'
+          // history.pushState('', '', url)
+        }
       })
       Fall.from('.fall', { opacity: 0, y: 500 }, 0)
+
+      ScrollTrigger.create({
+        trigger: '.scrollElement',
+        start: '6% top',
+        end: '23.99% 100%',
+        scrub: 2,
+        onEnter: () => {
+          const url = '#fall'
+          history.pushState('', '', url)
+        },
+        onLeave: () => {
+          const url = '#fall'
+          history.pushState('', '', url)
+        }
+      })
     })
   }
 }

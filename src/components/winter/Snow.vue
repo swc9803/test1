@@ -173,18 +173,22 @@ export default {
         scrub: 2,
         onEnter: () => {
           gsap.to('.snow', { visibility: 'visible' })
-          gsap.fromTo('.snow1', { y: '-100%', opacity: 0, ease: 'none', duration: 14, delay: 1.5 }, { y: '100%', opacity: 1, ease: 'none', duration: 14, delay: 1.5 })
+          gsap.fromTo('.snow1', { y: '-100%', opacity: 0, ease: 'none', duration: 14, delay: 1.5 }, { y: '200%', opacity: 1, ease: 'none', duration: 14, delay: 1.5 })
           gsap.fromTo('.snow1', { y: '-150%', repeat: -1, ease: 'none', duration: 14 }, { y: '100%', repeat: -1, ease: 'none', duration: 14 })
           gsap.fromTo('.snow12', { y: '-150%', repeat: -1, ease: 'none', duration: 14, delay: 7 }, { y: '100%', repeat: -1, ease: 'none', duration: 14, delay: 7 })
-          gsap.fromTo('.snow2', { y: '-100%', opacity: 0, ease: 'none', duration: 12, delay: 1.5 }, { y: '100%', opacity: 1, ease: 'none', duration: 12, delay: 1.5 })
+          gsap.fromTo('.snow2', { y: '-100%', opacity: 0, ease: 'none', duration: 12, delay: 1.5 }, { y: '200%', opacity: 1, ease: 'none', duration: 12, delay: 1.5 })
           gsap.fromTo('.snow2', { y: '-150%', repeat: -1, ease: 'none', duration: 12 }, { y: '100%', repeat: -1, ease: 'none', duration: 12 })
           gsap.fromTo('.snow22', { y: '-150%', repeat: -1, ease: 'none', duration: 12, delay: 6 }, { y: '100%', repeat: -1, ease: 'none', duration: 12, delay: 6 })
-          gsap.fromTo('.snow3', { y: '-100%', opacity: 0, ease: 'none', duration: 10, delay: 1.5 }, { y: '100%', opacity: 1, ease: 'none', duration: 10, delay: 1.5 })
+          gsap.fromTo('.snow3', { y: '-100%', opacity: 0, ease: 'none', duration: 10, delay: 1.5 }, { y: '200%', opacity: 1, ease: 'none', duration: 10, delay: 1.5 })
           gsap.fromTo('.snow3', { y: '-150%', repeat: -1, ease: 'none', duration: 10 }, { y: '100%', repeat: -1, ease: 'none', duration: 10 })
           gsap.fromTo('.snow32', { y: '-150%', repeat: -1, ease: 'none', duration: 10, delay: 5 }, { y: '100%', repeat: -1, ease: 'none', duration: 10, delay: 5 })
+          // const url = '#winter'
+          // history.pushState('', '', url)
         },
         onLeave: () => {
           gsap.to('.snow', { visibility: 'hidden' })
+          // const url = '#winter'
+          // history.pushState('', '', url)
         }
       })
 
@@ -198,6 +202,21 @@ export default {
       })
       Snowstop.to('.snow', { visibility: 'hidden' }, 0)
       Snowstop.to('.snow', { repeat: 0 }, 0)
+
+      ScrollTrigger.create({
+        trigger: '.scrollElement',
+        start: '24% top',
+        end: '100% 100%',
+        scrub: 2,
+        onEnter: () => {
+          const url = '#winter'
+          history.pushState('', '', url)
+        },
+        onLeave: () => {
+          const url = '#winter'
+          history.pushState('', '', url)
+        }
+      })
     })
   }
 }

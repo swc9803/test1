@@ -4,6 +4,7 @@
       section1
     </section>
     <section class="section2">
+      <div class="circle"></div>
       <div class="fixed">
         <p class="dd">City</p>
       </div>
@@ -54,29 +55,34 @@ export default {
           markers: true
         },
         filter: 'grayscale(0) blur(0px)',
-        // progress
         ease: 'none'
       })
-      // gsap.from('.dd', {
-      //   scrollTrigger: {
-      //     trigger: '.dd',
-      //     // pin: true,
-      //     start: 'center bottom',
-      //     end: 'top top',
-      //     scrub: 2,
-      //     markers: true
-      //   },
-      //   y: 100,
-      //   opacity: 0,
-      //   ease: 'none',
-      //   duration: 10
-      // })
+      const circle = document.querySelector('.circle')
+      document.addEventListener('mousemove', (e) => {
+        const mouseX = e.clientX
+        const mouseY = e.clientY
+        circle.style.left = mouseX + 'px'
+        circle.style.top = mouseY + 'px'
+      })
     })
   }
 }
 </script>
 
 <style scoped>
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ee6c4d;
+  opacity: 0.3;
+  filter: grayscale(10);
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
 .dd {
   position: absolute;
   top: 50%;

@@ -1,18 +1,18 @@
 <template>
-  <div class="wrapper">
-    <div class="scrollElement" />
-    <Scroll class="svg" />
-    <Fall class="svg" />
-    <Reed />
-    <Leaf />
-    <Winter class="svg" />
-    <Snow />
-    <Snowman class="svg"/>
-  </div>
+  <div class="scrollElement" />
+  <Scroll class="svg" />
+  <Summer />
+  <Fall class="svg" />
+  <Reed />
+  <Leaf />
+  <Winter class="svg" />
+  <Snow />
+  <Snowman class="svg"/>
 </template>
 
 <script>
 import Scroll from '@/components/fall/Scroll'
+import Summer from '@/components/summer/Summer'
 import Fall from '@/components/fall/Fall'
 import Reed from '@/components/fall/Reed'
 import Leaf from '@/components/fall/Leaf'
@@ -28,6 +28,7 @@ gsap.registerPlugin(ScrollTrigger)
 export default {
   components: {
     Scroll,
+    Summer,
     Fall,
     Reed,
     Leaf,
@@ -47,7 +48,8 @@ export default {
 </script>
 
 <style scoped>
-.wrapper {
+body,
+html{
   margin: 0;
   padding: 0;
   height: 100%;
