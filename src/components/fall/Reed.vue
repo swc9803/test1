@@ -1,5 +1,5 @@
 <template>
-  <svg class="reeds" width="1920" height="335" viewBox="0 0 1920 335" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg class="reeds" preserveAspectRatio="none" width="1920" height="1080" viewBox="0 0 1920 335" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g id="reed26">
     <path id="Rectangle 38" d="M1917.07 254.907L1918.13 255.651L1911.48 268.597L1903.66 281.388L1884.95 304.145L1883.88 303.401L1898.35 277.664L1907.44 265.767L1917.07 254.907Z" fill="black"/>
     <path id="stem" d="M1877.54 167.825L1880.82 168.027C1905.12 243.019 1902.69 282.733 1863.07 349.605L1859.94 349.294C1898.64 281.615 1902.59 241.846 1877.54 167.825Z" fill="black"/>
@@ -522,12 +522,5 @@ export default {
 </script>
 
 <style scoped>
-.reeds {
-  display: block;
-  width: 100%;
-  height: 40vh;
-  position: fixed;
-  bottom: -10%;
-  left: 0;
-}
+
 </style>

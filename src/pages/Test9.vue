@@ -3,24 +3,16 @@
   <Scroll class="svg" />
   <Spring />
   <Summer />
-  <Fall class="svg" />
-  <Reed />
-  <Leaf />
-  <Winter class="svg" />
-  <Snow />
-  <Snowman class="svg"/>
+  <Fall />
+  <Winter />
 </template>
 
 <script>
-import Scroll from '@/components/fall/Scroll'
+import Scroll from '@/components/Scroll'
 import Spring from '@/components/spring/Spring'
 import Summer from '@/components/summer/Summer'
 import Fall from '@/components/fall/Fall'
-import Reed from '@/components/fall/Reed'
-import Leaf from '@/components/fall/Leaf'
 import Winter from '@/components/winter/Winter'
-import Snow from '@/components/winter/Snow'
-import Snowman from '@/components/winter/Snowman'
 
 import { onMounted } from 'vue'
 import { gsap } from 'gsap'
@@ -33,11 +25,7 @@ export default {
     Spring,
     Summer,
     Fall,
-    Reed,
-    Leaf,
-    Winter,
-    Snow,
-    Snowman
+    Winter
   },
   setup () {
     window.onbeforeunload = function () {
@@ -67,7 +55,7 @@ html{
 }
 .scrollElement {
   position: absolute;
-  height: 800%;
+  height: 1200%;
   width: 100px;
   top: 0;
   opacity: 0;

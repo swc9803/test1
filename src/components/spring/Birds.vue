@@ -34,5 +34,7 @@ export default {
 </script>
 
 <style scoped>
-
+#birds {
+  transform: rotate(15deg);
+}
 </style>
