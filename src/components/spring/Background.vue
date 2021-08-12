@@ -113,6 +113,16 @@ export default {
         scrub: 2
       })
       Dark.from('#dark', 2, { y: '-100%', ease: 'none' })
+
+      const bigger = gsap.timeline()
+      ScrollTrigger.create({
+        animation: bigger,
+        trigger: '.scrollElement',
+        start: '30% top',
+        end: '41% 100%',
+        scrub: 1
+      })
+      bigger.to('#road, .trees', { scale: 6, autoAlpha: 6, transformOrigin: '50% 50%' })
     })
   }
 }

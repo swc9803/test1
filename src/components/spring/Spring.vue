@@ -1,8 +1,8 @@
 <template>
-  <Background class="spring" />
-  <Tree class="spring" />
-  <Birds class="spring" />
-  <SpringText class="spring" />
+  <Background class="spring wSpring" />
+  <Tree class="spring wSpring" />
+  <Birds class="spring wSpring" />
+  <SpringText class="spring wSpring" />
 </template>
 
 <script>
@@ -11,12 +11,39 @@ import Birds from '@/components/spring/Birds'
 import SpringText from '@/components/spring/SpringText'
 import Tree from '@/components/spring/Tree'
 
+import { onMounted } from 'vue'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 export default {
   components: {
     Background,
     Birds,
     SpringText,
     Tree
+  },
+  setup () {
+    onMounted(() => {
+      const Springon = gsap.timeline()
+      ScrollTrigger.create({
+        animation: Springon,
+        trigger: '.scrollElement',
+        start: '1.5% top',
+        end: '1.5% 100%',
+        scrub: 0
+      })
+      Springon.from('.wSpring', { display: 'none' })
+
+      const Springoff = gsap.timeline()
+      ScrollTrigger.create({
+        animation: Springoff,
+        trigger: '.scrollElement',
+        start: '34% top',
+        end: '34% 100%',
+        scrub: 0
+      })
+      Springoff.to('.wSpring', { display: 'none' })
+    })
   }
 }
 </script>

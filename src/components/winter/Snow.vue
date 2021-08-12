@@ -172,7 +172,7 @@ export default {
         end: '124% 100%',
         scrub: 2,
         onEnter: () => {
-          gsap.to('.snow', { visibility: 'visible' })
+          gsap.to('.snow', { display: 'block' })
           gsap.fromTo('.snow1', { y: '-100%', opacity: 0, ease: 'none', duration: 14, delay: 1.5 }, { y: '200%', opacity: 1, ease: 'none', duration: 14, delay: 1.5 })
           gsap.fromTo('.snow1', { y: '-150%', repeat: -1, ease: 'none', duration: 14 }, { y: '100%', repeat: -1, ease: 'none', duration: 14 })
           gsap.fromTo('.snow12', { y: '-150%', repeat: -1, ease: 'none', duration: 14, delay: 7 }, { y: '100%', repeat: -1, ease: 'none', duration: 14, delay: 7 })
@@ -186,7 +186,7 @@ export default {
           // history.pushState('', '', url)
         },
         onLeave: () => {
-          gsap.to('.snow', { visibility: 'hidden' })
+          gsap.to('.snow', { display: 'none' })
           // const url = '#winter'
           // history.pushState('', '', url)
         }
@@ -200,7 +200,7 @@ export default {
         end: '36.5% 100%',
         scrub: 0
       })
-      Snowstop.to('.snow', { visibility: 'hidden' }, 0)
+      Snowstop.to('.snow', { display: 'none' }, 0)
       Snowstop.to('.snow', { repeat: 0 }, 0)
 
       ScrollTrigger.create({
@@ -230,6 +230,6 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  visibility: hidden;
+  display: none;
 }
 </style>

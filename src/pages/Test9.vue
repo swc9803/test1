@@ -1,16 +1,16 @@
 <template>
   <div class="scrollElement" />
   <Scroll class="svg" />
-  <Spring />
-  <!-- <Summer /> -->
-  <!-- <Fall /> -->
-  <!-- <Winter /> -->
+  <Spring class="wSpring" />
+  <Summer class="wSummer" />
+  <!-- <Fall class="wFall" /> -->
+  <!-- <Winter class="wWinter" /> -->
 </template>
 
 <script>
 import Scroll from '@/components/Scroll'
 import Spring from '@/components/spring/Spring'
-// import Summer from '@/components/summer/Summer'
+import Summer from '@/components/summer/Summer'
 // import Fall from '@/components/fall/Fall'
 // import Winter from '@/components/winter/Winter'
 
@@ -22,8 +22,8 @@ gsap.registerPlugin(ScrollTrigger)
 export default {
   components: {
     Scroll,
-    Spring
-    // Summer,
+    Spring,
+    Summer
     // Fall,
     // Winter
   },

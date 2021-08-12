@@ -64,7 +64,7 @@ export default {
         end: '45% 100%',
         scrub: 3
       })
-      Leaf1.fromTo('.rotate1', 2, { visibility: 'hidden', x: 2000, rotate: 250 }, { visibility: 'visible', x: -4000, rotate: 0 }, 0)
+      Leaf1.fromTo('.rotate1', 2, { display: 'none', x: 2000, rotate: 250 }, { display: 'block', x: -4000, rotate: 0 }, 0)
       Leaf1.fromTo('.leaf1', 2, { y: -170 }, { y: 100 }, 0)
 
       const Leaf2 = gsap.timeline()
@@ -75,7 +75,7 @@ export default {
         end: '35% 100%',
         scrub: 3
       })
-      Leaf2.fromTo('.rotate2', 2, { visibility: 'hidden', x: 2000, rotate: 250, ease: 'none' }, { visibility: 'visible', x: -4000, rotate: 0, ease: 'none' }, 0)
+      Leaf2.fromTo('.rotate2', 2, { display: 'none', x: 2000, rotate: 250, ease: 'none' }, { display: 'block', x: -4000, rotate: 0, ease: 'none' }, 0)
       Leaf2.fromTo('.leaf2', 2, { y: -170 }, { y: 100 }, 0)
 
       const Leaf3 = gsap.timeline()
@@ -86,7 +86,7 @@ export default {
         end: '35% 100%',
         scrub: 3
       })
-      Leaf3.fromTo('.rotate3', 2, { visibility: 'hidden', x: 2000, rotate: 250, ease: 'none' }, { visibility: 'visible', x: -8000, rotate: 0, ease: 'none' }, 0)
+      Leaf3.fromTo('.rotate3', 2, { display: 'none', x: 2000, rotate: 250, ease: 'none' }, { display: 'block', x: -8000, rotate: 0, ease: 'none' }, 0)
       Leaf3.fromTo('.leaf3', 2, { y: -170 }, { y: 100 }, 0)
 
       const Leaf4 = gsap.timeline()
@@ -97,7 +97,7 @@ export default {
         end: '35% 100%',
         scrub: 2
       })
-      Leaf4.fromTo('.rotate4', 2, { visibility: 'hidden', x: 2000, rotate: 250, ease: 'none' }, { visibility: 'visible', x: -8000, rotate: 0, ease: 'none' }, 0)
+      Leaf4.fromTo('.rotate4', 2, { display: 'none', x: 2000, rotate: 250, ease: 'none' }, { display: 'block', x: -8000, rotate: 0, ease: 'none' }, 0)
       Leaf3.fromTo('.leaf4', 2, { y: -170 }, { y: 100 }, 0)
 
       const Leaf5 = gsap.timeline()
@@ -108,7 +108,7 @@ export default {
         end: '34% 100%',
         scrub: 2
       })
-      Leaf5.fromTo('.leaf5', 2, { visibility: 'hidden', x: 2000, ease: 'none' }, { visibility: 'visible', x: -800, rotate: 0, ease: 'none' }, 0)
+      Leaf5.fromTo('.leaf5', 2, { display: 'none', x: 2000, ease: 'none' }, { display: 'block', x: -800, rotate: 0, ease: 'none' }, 0)
     })
   }
 }

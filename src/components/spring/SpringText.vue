@@ -33,20 +33,10 @@ export default {
         animation: SpringTextoff,
         trigger: '.scrollElement',
         start: '27% top',
-        end: '32% 100%',
-        scrub: 2
+        end: '35% 100%',
+        scrub: 1
       })
       SpringTextoff.to('#springtext', { opacity: 0, y: '30%' })
-
-      const bigger = gsap.timeline()
-      ScrollTrigger.create({
-        animation: bigger,
-        trigger: '.scrollElement',
-        start: '30% top',
-        end: '35% 100%',
-        scrub: 2
-      })
-      bigger.to('#road, .trees', { scale: 4, autoAlpha: 4, transformOrigin: '50% 50%' })
     })
   }
 }

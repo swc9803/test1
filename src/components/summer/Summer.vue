@@ -597,12 +597,34 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 export default {
   setup () {
     onMounted(() => {
+      const Summeron = gsap.timeline()
+      ScrollTrigger.create({
+        animation: Summeron,
+        trigger: '.scrollElement',
+        start: '33% top',
+        end: '40% 100%',
+        scrub: 1,
+        markers: true
+      })
+      Summeron.from('.wSummer', { opacity: 0 })
+      Summeron.from('.wSummer', { display: 'none' })
+
+      const Summeroff = gsap.timeline()
+      ScrollTrigger.create({
+        animation: Summeroff,
+        trigger: '.scrollElement',
+        start: '60% top',
+        end: '60% 100%',
+        scrub: 0
+      })
+      Summeroff.to('.wSummer', { display: 'none' })
+
       const Summer = gsap.timeline()
       ScrollTrigger.create({
         animation: Summer,
         trigger: '.scrollElement',
-        start: '2% top',
-        end: '30% 100%',
+        start: '42% top',
+        end: '70% 100%',
         scrub: 3
       })
       gsap.fromTo('#openeyes, #ropeneyes', { opacity: 0, duration: 0.2, ease: 'none' }, { opacity: 1, duration: 0.2, ease: 'none', repeatDelay: 3.9, repeat: -1 })

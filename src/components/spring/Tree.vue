@@ -42,10 +42,10 @@ export default {
         end: '35% 100%',
         scrub: 2
       })
-      lTreemove.to('.ltree1, .ltree2, .ltree3', 1, { x: '-5%' })
-        .to('.rtree1, .rtree2, .rtree3', 1, { x: '5%' }, 0)
-        .to('.ltree1, .ltree2, .ltree3', { visibility: 'hidden' })
-        .to('.rtree1, .rtree2, .rtree3', { visibility: 'hidden' })
+      lTreemove.to('.ltree1, .ltree2, .ltree3', 1, { x: '-10%' })
+        .to('.rtree1, .rtree2, .rtree3', 1, { x: '10%' }, 0)
+        .to('.ltree1, .ltree2, .ltree3', { display: 'none' })
+        .to('.rtree1, .rtree2, .rtree3', { display: 'none' })
     })
   }
 }

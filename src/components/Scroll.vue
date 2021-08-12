@@ -28,6 +28,7 @@ export default {
       })
       gsap.to('#arrow', { y: '-10%', ease: 'none', repeat: -1, yoyo: true })
       Scroll.to('.scroll', { y: '5%', opacity: 0 })
+      Scroll.to('.scroll', { display: 'none' })
     })
   }
 }
