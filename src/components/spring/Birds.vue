@@ -23,11 +23,11 @@ export default {
       ScrollTrigger.create({
         animation: Birds,
         trigger: '.scrollElement',
-        start: '2% top',
-        end: '30% 100%',
+        start: '12% top',
+        end: '32% 100%',
         scrub: 2
       })
-      Birds.to('#birds', { x: '1000%', y: '-200%' })
+      Birds.fromTo('#birds', { x: '-100%' }, { x: '1000%', y: '-250%' })
     })
   }
 }

@@ -2,17 +2,17 @@
   <div class="scrollElement" />
   <Scroll class="svg" />
   <Spring />
-  <Summer />
-  <Fall />
-  <Winter />
+  <!-- <Summer /> -->
+  <!-- <Fall /> -->
+  <!-- <Winter /> -->
 </template>
 
 <script>
 import Scroll from '@/components/Scroll'
 import Spring from '@/components/spring/Spring'
-import Summer from '@/components/summer/Summer'
-import Fall from '@/components/fall/Fall'
-import Winter from '@/components/winter/Winter'
+// import Summer from '@/components/summer/Summer'
+// import Fall from '@/components/fall/Fall'
+// import Winter from '@/components/winter/Winter'
 
 import { onMounted } from 'vue'
 import { gsap } from 'gsap'
@@ -22,10 +22,10 @@ gsap.registerPlugin(ScrollTrigger)
 export default {
   components: {
     Scroll,
-    Spring,
-    Summer,
-    Fall,
-    Winter
+    Spring
+    // Summer,
+    // Fall,
+    // Winter
   },
   setup () {
     window.onbeforeunload = function () {

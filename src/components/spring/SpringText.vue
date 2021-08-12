@@ -1,5 +1,5 @@
 <template>
-  <svg preserveAspectRatio="none" width="1920" height="1080" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1012 525">
+  <svg class="springtext" preserveAspectRatio="none" width="1920" height="1080" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1012 525">
     <defs/>
     <g id="Spring">
       <g id="springtext">
@@ -22,11 +22,31 @@ export default {
       ScrollTrigger.create({
         animation: SpringText,
         trigger: '.scrollElement',
-        start: '2% top',
-        end: '15% 100%',
+        start: '5% top',
+        end: '10% 100%',
         scrub: 2
       })
-      SpringText.to('#springText', { })
+      SpringText.from('#springtext', { opacity: 0, y: '100%' })
+
+      const SpringTextoff = gsap.timeline()
+      ScrollTrigger.create({
+        animation: SpringTextoff,
+        trigger: '.scrollElement',
+        start: '27% top',
+        end: '32% 100%',
+        scrub: 2
+      })
+      SpringTextoff.to('#springtext', { opacity: 0, y: '30%' })
+
+      const bigger = gsap.timeline()
+      ScrollTrigger.create({
+        animation: bigger,
+        trigger: '.scrollElement',
+        start: '30% top',
+        end: '35% 100%',
+        scrub: 2
+      })
+      bigger.to('#road, .trees', { scale: 4, autoAlpha: 4, transformOrigin: '50% 50%' })
     })
   }
 }
