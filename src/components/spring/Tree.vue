@@ -26,7 +26,7 @@ export default {
         scrub: 2
       })
       Tree.from('.trees', { opacity: 0 })
-      Tree.from('#road', { opacity: 0 }, '<1.5')
+      Tree.from('#road', { opacity: 0 }, '<0.5')
       gsap.to('.ltree1', { rotate: 0.7, transformOrigin: 'left bottom 100%', duration: 3, ease: 'none', repeat: -1, yoyo: true })
       gsap.to('.rtree1', { rotate: -0.7, transformOrigin: 'right bottom 100%', delay: 3, duration: 3, ease: 'none', repeat: -1, yoyo: true })
       gsap.to('.ltree2', { rotate: 0.7, transformOrigin: 'left center 100%', duration: 5, ease: 'none', repeat: -1, yoyo: true })

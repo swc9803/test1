@@ -5,45 +5,26 @@
       <path id="backgroundsolid" fill="#C2F4B9" d="M0 0h1012v525H0z"/>
       <path id="background" fill="url(#paint0_linear)" fill-opacity=".5" d="M0 0h1012v525H0z"/>
       <g id="sun">
-        <g id="out" filter="url(#filter0_f)">
+        <g id="out" filter="url(#filter0_sun)">
           <circle cx="506.5" cy="41.5" r="41.5" fill="url(#paint1_radial)"/>
         </g>
-        <g id="in" filter="url(#filter1_f)">
-          <circle cx="506.5" cy="41.5" r="34.1673" fill="url(#paint2_radial)"/>
-        </g>
+        <circle id="in" cx="506.5" cy="41.5" r="34.1673" fill="url(#paint2_radial)"/>
       </g>
-      <g id="dark" filter="url(#filter2_f)">
+      <g id="dark" filter="url(#filter1_dark)">
         <path fill="url(#paint3_linear)" fill-opacity=".4" d="M0 0h1012v525H0z"/>
       </g>
-      <g id="road" filter="url(#filter3_d)">
-        <path fill="url(#paint4_radial)" d="M436.898 253h135.921L685 525H328l108.898-272z" shape-rendering="crispEdges"/>
-      </g>
+      <path id="road" fill="#4A4A4A" d="M436.898 253h135.921L685 525H328l108.898-272z"/>
     </g>
     <defs>
-      <filter id="filter0_f" width="103" height="103" x="455" y="-10" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <filter id="filter0_sun" width="103" height="103" x="455" y="-10" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
         <feFlood flood-opacity="0" result="BackgroundImageFix"/>
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
         <feGaussianBlur result="effect1_foregroundBlur" stdDeviation="5"/>
       </filter>
-      <filter id="filter1_f" width="70.3346" height="70.3346" x="471.333" y="6.3327" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
-        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-        <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-        <feGaussianBlur result="effect1_foregroundBlur" stdDeviation=".5"/>
-      </filter>
-      <filter id="filter2_f" width="1016" height="529" x="-2" y="-2" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <filter id="filter1_dark" width="1016" height="529" x="-2" y="-2" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
         <feFlood flood-opacity="0" result="BackgroundImageFix"/>
         <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
         <feGaussianBlur result="effect1_foregroundBlur" stdDeviation="1"/>
-      </filter>
-      <filter id="filter3_d" width="377" height="292" x="318" y="253" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
-        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-        <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-        <feOffset dy="10"/>
-        <feGaussianBlur stdDeviation="5"/>
-        <feComposite in2="hardAlpha" operator="out"/>
-        <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-        <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
-        <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
       </filter>
       <linearGradient id="paint0_linear" x1="506" x2="506" y1="186.5" y2="525" gradientUnits="userSpaceOnUse">
         <stop stop-color="#5263FF"/>
@@ -65,10 +46,6 @@
         <stop offset=".655304" stop-color="#8E8E8E"/>
         <stop offset="1" stop-color="#C5C5C5" stop-opacity="0"/>
       </linearGradient>
-      <radialGradient id="paint4_radial" cx="0" cy="0" r="1" gradientTransform="matrix(0 272 -327 0 506.5 253)" gradientUnits="userSpaceOnUse">
-        <stop offset=".458333" stop-color="#4A4A4A"/>
-        <stop offset="1" stop-color="#4A4A4A" stop-opacity=".8"/>
-      </radialGradient>
       <clipPath id="clip0">
         <path fill="#fff" d="M0 0h1012v525H0z"/>
       </clipPath>

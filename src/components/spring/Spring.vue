@@ -28,8 +28,8 @@ export default {
       ScrollTrigger.create({
         animation: Springon,
         trigger: '.scrollElement',
-        start: '1.5% top',
-        end: '1.5% 100%',
+        start: '-1% top',
+        end: '34% 100%',
         scrub: 0
       })
       Springon.from('.wSpring', { display: 'none' })
