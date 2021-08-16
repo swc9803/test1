@@ -3,7 +3,7 @@
   <Scroll class="svg" />
   <Spring class="wSpring" />
   <Summer class="wSummer" />
-  <!-- <Fall class="wFall" /> -->
+  <Fall class="wFall" />
   <!-- <Winter class="wWinter" /> -->
 </template>
 
@@ -11,7 +11,7 @@
 import Scroll from '@/components/Scroll'
 import Spring from '@/components/spring/Spring'
 import Summer from '@/components/summer/Summer'
-// import Fall from '@/components/fall/Fall'
+import Fall from '@/components/fall/Fall'
 // import Winter from '@/components/winter/Winter'
 
 import { onMounted } from 'vue'
@@ -23,8 +23,8 @@ export default {
   components: {
     Scroll,
     Spring,
-    Summer
-    // Fall,
+    Summer,
+    Fall
     // Winter
   },
   setup () {
