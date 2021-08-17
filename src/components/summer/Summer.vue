@@ -32,8 +32,8 @@ export default {
       ScrollTrigger.create({
         animation: Summeroff,
         trigger: '.scrollElement',
-        start: '60% top',
-        end: '60% 100%',
+        start: '63% top',
+        end: '63% 100%',
         scrub: 0
       })
       Summeroff.to('.wSummer', { display: 'none' })

@@ -55,7 +55,7 @@ html{
 }
 .scrollElement {
   position: absolute;
-  height: 1200%;
+  height: 1600%;
   width: 100px;
   top: 0;
   opacity: 0;

@@ -60,8 +60,8 @@ export default {
       ScrollTrigger.create({
         animation: Leaf1,
         trigger: '.scrollElement',
-        start: '8% top',
-        end: '45% 100%',
+        start: '65% top',
+        end: '103% 100%',
         scrub: 3
       })
       Leaf1.fromTo('.rotate1', 2, { display: 'none', x: 2000, rotate: 250 }, { display: 'block', x: -4000, rotate: 0 }, 0)
@@ -71,8 +71,8 @@ export default {
       ScrollTrigger.create({
         animation: Leaf2,
         trigger: '.scrollElement',
-        start: '8% top',
-        end: '35% 100%',
+        start: '65% top',
+        end: '92% 100%',
         scrub: 3
       })
       Leaf2.fromTo('.rotate2', 2, { display: 'none', x: 2000, rotate: 250, ease: 'none' }, { display: 'block', x: -4000, rotate: 0, ease: 'none' }, 0)
@@ -82,8 +82,8 @@ export default {
       ScrollTrigger.create({
         animation: Leaf3,
         trigger: '.scrollElement',
-        start: '8% top',
-        end: '35% 100%',
+        start: '65% top',
+        end: '92% 100%',
         scrub: 3
       })
       Leaf3.fromTo('.rotate3', 2, { display: 'none', x: 2000, rotate: 250, ease: 'none' }, { display: 'block', x: -8000, rotate: 0, ease: 'none' }, 0)
@@ -93,8 +93,8 @@ export default {
       ScrollTrigger.create({
         animation: Leaf4,
         trigger: '.scrollElement',
-        start: '8% top',
-        end: '35% 100%',
+        start: '65% top',
+        end: '92% 100%',
         scrub: 2
       })
       Leaf4.fromTo('.rotate4', 2, { display: 'none', x: 2000, rotate: 250, ease: 'none' }, { display: 'block', x: -8000, rotate: 0, ease: 'none' }, 0)
@@ -104,8 +104,8 @@ export default {
       ScrollTrigger.create({
         animation: Leaf5,
         trigger: '.scrollElement',
-        start: '24% top',
-        end: '34% 100%',
+        start: '78% top',
+        end: '92% 100%',
         scrub: 2
       })
       Leaf5.fromTo('.leaf5', 2, { display: 'none', x: 2000, ease: 'none' }, { display: 'block', x: -800, rotate: 0, ease: 'none' }, 0)
@@ -120,7 +120,6 @@ export default {
   display: block;
   top: 0;
   left: 0;
-  height: 100%;
 }
 .leaf5 {
   position: fixed;
