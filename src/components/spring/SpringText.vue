@@ -22,21 +22,21 @@ export default {
       ScrollTrigger.create({
         animation: SpringText,
         trigger: '.scrollElement',
-        start: '5% top',
-        end: '10% 100%',
+        start: '2% top',
+        end: '6% 100%',
         scrub: 2
       })
-      SpringText.from('#springtext', { opacity: 0, y: '100%' })
+      SpringText.from('#springtext', { opacity: 0, yPercent: 100 })
 
       const SpringTextoff = gsap.timeline()
       ScrollTrigger.create({
         animation: SpringTextoff,
         trigger: '.scrollElement',
-        start: '27% top',
-        end: '35% 100%',
+        start: '22% top',
+        end: '30% 100%',
         scrub: 1
       })
-      SpringTextoff.to('#springtext', { opacity: 0, y: '30%' })
+      SpringTextoff.to('#springtext', { opacity: 0, yPercent: 30 })
     })
   }
 }

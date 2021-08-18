@@ -4,7 +4,7 @@
   <Spring class="wSpring" />
   <Summer class="wSummer" />
   <Fall class="wFall" />
-  <!-- <Winter class="wWinter" /> -->
+  <Winter class="wWinter" />
 </template>
 
 <script>
@@ -12,28 +12,17 @@ import Scroll from '@/components/Scroll'
 import Spring from '@/components/spring/Spring'
 import Summer from '@/components/summer/Summer'
 import Fall from '@/components/fall/Fall'
-// import Winter from '@/components/winter/Winter'
-
-import { onMounted } from 'vue'
+import Winter from '@/components/winter/Winter'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 export default {
-  components: {
-    Scroll,
-    Spring,
-    Summer,
-    Fall
-    // Winter
-  },
+  components: { Scroll, Spring, Summer, Fall, Winter },
   setup () {
     window.onbeforeunload = function () {
       window.scrollTo(0, 0)
     }
-    onMounted(() => {
-
-    })
   }
 }
 </script>

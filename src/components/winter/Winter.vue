@@ -8,12 +8,32 @@
 import WinterText from '@/components/winter/WinterText'
 import Snow from '@/components/winter/Snow'
 import Snowman from '@/components/winter/Snowman'
-
+import { onMounted } from 'vue'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
 export default {
-  components: {
-    WinterText,
-    Snow,
-    Snowman
+  components: { WinterText, Snow, Snowman },
+  setup () {
+    onMounted(() => {
+      ScrollTrigger.create({
+        trigger: '.scrollElement',
+        start: '76% top',
+        end: '95% 100%',
+        onEnter: () => {
+          const url = '#winter'
+          history.pushState('', '', url)
+        },
+        onEnterBack: () => {
+          const url = '#winter'
+          history.pushState('', '', url)
+        },
+        onLeaveBack: () => {
+          const url = '#winter'
+          history.pushState('', '', url)
+        }
+      })
+    })
   }
 }
 </script>

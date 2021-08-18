@@ -64,8 +64,8 @@ export default {
       ScrollTrigger.create({
         animation: Rain,
         trigger: '.scrollElement',
-        start: '33% top',
-        end: '53% 100%',
+        start: '26% top',
+        end: '46% 100%',
         scrub: 3
       })
       Rain.fromTo('#rain1', { ease: 'none', yPercent: -130 }, { ease: 'none', yPercent: 110 }, 0)
@@ -74,8 +74,8 @@ export default {
       ScrollTrigger.create({
         animation: Rainn,
         trigger: '.scrollElement',
-        start: '38% top',
-        end: '58% 100%',
+        start: '30% top',
+        end: '50% 100%',
         scrub: 3
       })
       Rainn.fromTo('#rain21', { ease: 'none', yPercent: -130 }, { ease: 'none', yPercent: 110 }, 0)
@@ -84,8 +84,8 @@ export default {
       ScrollTrigger.create({
         animation: Rainnn,
         trigger: '.scrollElement',
-        start: '43% top',
-        end: '60% 100%',
+        start: '35% top',
+        end: '52% 100%',
         scrub: 3
       })
       Rainnn.fromTo('#rain31', { ease: 'none', yPercent: -130 }, { ease: 'none', yPercent: 110 }, 0)

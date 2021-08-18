@@ -22,11 +22,25 @@ export default {
         animation: Scroll,
         trigger: '.scrollElement',
         start: 'top top',
-        end: '1.5% top',
-        scrub: 3
+        end: '1.2% top',
+        scrub: 3,
+        onEnter: () => {
+          const url = '#'
+          history.pushState('', '', url)
+        },
+        onEnterBack: () => {
+          const url = '#'
+          history.pushState('', '', url)
+        },
+        onLeaveBack: () => {
+          const url = '#'
+          history.pushState('', '', url)
+        }
       })
-      gsap.to('#arrow', { y: '-10%', ease: 'none', repeat: -1, yoyo: true })
-      Scroll.to('.scroll', { y: '5%', opacity: 0 })
+      const url = '#'
+      history.pushState('', '', url)
+      gsap.to('#arrow', { yPercent: -10, ease: 'none', repeat: -1, yoyo: true })
+      Scroll.to('.scroll', { yPercent: 5, opacity: 0 })
       Scroll.to('.scroll', { display: 'none' })
     })
   }

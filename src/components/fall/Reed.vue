@@ -1055,8 +1055,8 @@ export default {
       ScrollTrigger.create({
         animation: reedon,
         trigger: '.scrollElement',
-        start: '60% top',
-        end: '63% 100%',
+        start: '53% top',
+        end: '55% 100%',
         scrub: 4
       })
       reedon.from('.reeds', { yPercent: 30 })
@@ -1066,8 +1066,8 @@ export default {
       ScrollTrigger.create({
         animation: Reed,
         trigger: '.scrollElement',
-        start: '62% top',
-        end: '65% 100%',
+        start: '55% top',
+        end: '58% 100%',
         scrub: 4
       })
       gsap.to('#freed1, #freed3, #freed4, #freed6, #freed9', { rotate: -4, transformOrigin: '100% 100%', delay: -1, duration: 3, ease: 'none', repeat: -1, yoyo: true })
@@ -1081,5 +1081,7 @@ export default {
 </script>
 
 <style scoped>
-
+#freed1, #freed2, #freed3, #freed4, #freed5, #freed6, #freed7, #freed8, #freed9, #reed1, #reed2, #reed3, #reed4, #reed5, #reed6, #reed7, #reed8, #reed9, #reed10, #reed11, #reed12, #reed13 {
+  display: none;
+}
 </style>

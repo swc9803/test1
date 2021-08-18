@@ -187,8 +187,8 @@ export default {
       ScrollTrigger.create({
         animation: on,
         trigger: '.scrollElement',
-        start: '34% top',
-        end: '50% 100%',
+        start: '30% top',
+        end: '46% 100%',
         scrub: 1
       })
       on.from('#off', { opacity: 0 })
@@ -197,8 +197,8 @@ export default {
       ScrollTrigger.create({
         animation: Summer,
         trigger: '.scrollElement',
-        start: '57% top',
-        end: '67% 100%',
+        start: '49% top',
+        end: '59% 100%',
         scrub: 3
       })
       gsap.fromTo('#openeyes, #ropeneyes', { opacity: 0, duration: 0.2, ease: 'none' }, { opacity: 1, duration: 0.2, ease: 'none', repeatDelay: 3.9, repeat: -1 })
@@ -209,19 +209,19 @@ export default {
       gsap.to('#splash2', { opacity: 0, duration: 1, repeat: -1, repeatDelay: 4, delay: 3 })
       gsap.fromTo('#splash3', { opacity: 0, scale: 0, autoAlpha: 0, duration: 1, ease: Power2, transformOrigin: '50% 50%', repeat: -1, repeatDelay: 4, delay: 4 }, { opacity: 1, scale: 15, autoAlpha: 15, duration: 1, ease: Power2, transformOrigin: '50% 50%', repeat: -1, repeatDelay: 4, delay: 4 })
       gsap.to('#splash3', { opacity: 0, duration: 1, repeat: -1, repeatDelay: 4, delay: 4.5 })
-      Summer.to('#lcloud1', { x: '-140%' }, 0)
-      Summer.to('#lcloud2', { x: '-160%' }, 0)
-      Summer.to('#lcloud3', { x: '-120%' }, 0)
-      Summer.to('#rcloud1', { x: '140%' }, 0)
-      Summer.to('#rcloud2', { x: '160%' }, 0)
-      Summer.to('#rcloud3', { x: '120%' }, 0)
+      Summer.to('#lcloud1', { xPercent: -140 }, 0)
+      Summer.to('#lcloud2', { xPercent: -160 }, 0)
+      Summer.to('#lcloud3', { xPercent: -120 }, 0)
+      Summer.to('#rcloud1', { xPercent: 140 }, 0)
+      Summer.to('#rcloud2', { xPercent: 160 }, 0)
+      Summer.to('#rcloud3', { xPercent: 120 }, 0)
 
       const off = gsap.timeline()
       ScrollTrigger.create({
         animation: off,
         trigger: '.scrollElement',
-        start: '52% top',
-        end: '62% 100%',
+        start: '44% top',
+        end: '54% 100%',
         scrub: 3
       })
       off.to('#off', { opacity: 0 }, 0)

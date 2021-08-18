@@ -21,8 +21,8 @@ export default {
       ScrollTrigger.create({
         animation: Tree,
         trigger: '.scrollElement',
-        start: '8% top',
-        end: '12% 100%',
+        start: '5% top',
+        end: '8% 100%',
         scrub: 2
       })
       Tree.from('.trees', { opacity: 0 })
@@ -38,12 +38,12 @@ export default {
       ScrollTrigger.create({
         animation: lTreemove,
         trigger: '.scrollElement',
-        start: '30% top',
-        end: '35% 100%',
+        start: '24% top',
+        end: '29% 100%',
         scrub: 2
       })
-      lTreemove.to('.ltree1, .ltree2, .ltree3', 1, { x: '-10%' })
-        .to('.rtree1, .rtree2, .rtree3', 1, { x: '10%' }, 0)
+      lTreemove.to('.ltree1, .ltree2, .ltree3', 0, { xPercent: -5 })
+        .to('.rtree1, .rtree2, .rtree3', 0, { xPercent: 5 }, 0)
         .to('.ltree1, .ltree2, .ltree3', { display: 'none' })
         .to('.rtree1, .rtree2, .rtree3', { display: 'none' })
     })

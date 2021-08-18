@@ -24,8 +24,8 @@ export default {
       ScrollTrigger.create({
         animation: FallBack,
         trigger: '.scrollElement',
-        start: '58% top',
-        end: '72% 100%',
+        start: '50% top',
+        end: '64% 100%',
         scrub: 2
       })
       FallBack.from('.fallback', { opacity: 0 })

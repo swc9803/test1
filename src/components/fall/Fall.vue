@@ -10,13 +10,46 @@ import Background from '@/components/fall/Background'
 import FallText from '@/components/fall/FallText'
 import Reed from '@/components/fall/Reed'
 import Leaf from '@/components/fall/Leaf'
-
+import { onMounted } from 'vue'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
 export default {
-  components: {
-    Background,
-    FallText,
-    Reed,
-    Leaf
+  components: { Background, FallText, Reed, Leaf },
+  setup () {
+    onMounted(() => {
+      ScrollTrigger.create({
+        trigger: '.scrollElement',
+        start: '55% top',
+        end: '75% 100%',
+        onEnter: () => {
+          const url = '#fall'
+          history.pushState('', '', url)
+          gsap.to('#freed1, #freed2, #freed3, #freed4, #freed5, #freed6, #freed7, #freed8, #freed9, #reed1, #reed2, #reed3, #reed4, #reed5, #reed6, #reed7, #reed8, #reed9, #reed10, #reed11, #reed12, #reed13', { display: 'block' })
+        },
+        onEnterBack: () => {
+          const url = '#fall'
+          history.pushState('', '', url)
+        },
+        onLeaveBack: () => {
+          const url = '#fall'
+          history.pushState('', '', url)
+          gsap.to('#freed1, #freed2, #freed3, #freed4, #freed5, #freed6, #freed7, #freed8, #freed9, #reed1, #reed2, #reed3, #reed4, #reed5, #reed6, #reed7, #reed8, #reed9, #reed10, #reed11, #reed12, #reed13', { display: 'none' })
+        }
+      })
+
+      ScrollTrigger.create({
+        trigger: '.scrollElement',
+        start: '53% top',
+        end: '77% 100%',
+        onEnter: () => {
+          gsap.to('#freed1, #freed2, #freed3, #freed4, #freed5, #freed6, #freed7, #freed8, #freed9, #reed1, #reed2, #reed3, #reed4, #reed5, #reed6, #reed7, #reed8, #reed9, #reed10, #reed11, #reed12, #reed13', { display: 'block' })
+        },
+        onLeaveBack: () => {
+          gsap.to('#freed1, #freed2, #freed3, #freed4, #freed5, #freed6, #freed7, #freed8, #freed9, #reed1, #reed2, #reed3, #reed4, #reed5, #reed6, #reed7, #reed8, #reed9, #reed10, #reed11, #reed12, #reed13', { display: 'none' })
+        }
+      })
+    })
   }
 }
 </script>

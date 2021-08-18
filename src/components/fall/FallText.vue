@@ -27,8 +27,8 @@ export default {
       ScrollTrigger.create({
         animation: falltext,
         trigger: '.scrollElement',
-        start: '60% top',
-        end: '70% 100%',
+        start: '52% top',
+        end: '62% 100%',
         scrub: 2,
         onEnter: () => {
           document.querySelector('#Fallstroke').style.animationPlayState = 'running'

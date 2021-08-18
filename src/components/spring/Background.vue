@@ -66,7 +66,7 @@ export default {
         animation: Background,
         trigger: '.scrollElement',
         start: '0.5% top',
-        end: '15% 100%',
+        end: '10% 100%',
         scrub: 1
       })
       Background.from('#backgroundsolid, #background', { opacity: 0, ease: 'none' })
@@ -75,28 +75,28 @@ export default {
       ScrollTrigger.create({
         animation: Sun,
         trigger: '.scrollElement',
-        start: '15% top',
-        end: '30% 100%',
+        start: '10% top',
+        end: '23% 100%',
         scrub: 2
       })
-      Sun.fromTo('#sun', 2, { y: '-100%', scale: 1, autoAlpha: 1, ease: 'none', transformOrigin: '50% 50%' }, { y: '400%', scale: 2, autoAlpha: 2, ease: 'none', transformOrigin: '50% 50%' })
+      Sun.fromTo('#sun', 2, { yPercent: -100, scale: 1, autoAlpha: 1, ease: 'none', transformOrigin: '50% 50%' }, { yPercent: 400, scale: 2, autoAlpha: 2, ease: 'none', transformOrigin: '50% 50%' })
 
       const Dark = gsap.timeline()
       ScrollTrigger.create({
         animation: Dark,
         trigger: '.scrollElement',
-        start: '22% top',
-        end: '32% 100%',
+        start: '15.5% top',
+        end: '25% 100%',
         scrub: 2
       })
-      Dark.from('#dark', 2, { y: '-100%', ease: 'none' })
+      Dark.from('#dark', 2, { yPercent: -100, ease: 'none' })
 
       const bigger = gsap.timeline()
       ScrollTrigger.create({
         animation: bigger,
         trigger: '.scrollElement',
-        start: '30% top',
-        end: '41% 100%',
+        start: '23% top',
+        end: '32% 100%',
         scrub: 1
       })
       bigger.to('#road, .trees', { scale: 6, autoAlpha: 6, transformOrigin: '50% 50%' })
