@@ -29,7 +29,7 @@ export default {
 
 <style scoped>
 body,
-html{
+html {
   margin: 0;
   padding: 0;
   height: 100%;
